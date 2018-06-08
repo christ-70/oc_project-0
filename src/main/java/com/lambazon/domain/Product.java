@@ -6,6 +6,7 @@ public class Product {
 	private String name, description, details;
 	private int quantity;
 	private double price;
+	private double totalInventoryPrice; //private double totalInventoryPrice added
 
 	public Product(int id, int quantity, double price, String name, String description) {
 		setId(id);
@@ -65,6 +66,7 @@ public class Product {
 
 	public double getInventoryPrice() {
 		// TODO Auto-generated method stub
-		return 0.0;
+		totalInventoryPrice = price*quantity; //added fonction price*quantity
+		return totalInventoryPrice;
 	}
 }
