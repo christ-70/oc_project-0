@@ -36,7 +36,7 @@ public class ProductController {
 		
 		double totalInventoryAmount = 0.0;
 		for (Product p : productService.products()) {
-			totalInventoryAmount+=p.getInventoryPrice();
+			totalInventoryAmount+=p.getInventoryPrice(); // function already amended !!!
 		}
 		
 		return totalInventoryAmount;
