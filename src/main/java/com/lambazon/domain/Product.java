@@ -53,20 +53,37 @@ public class Product {
 	}
 
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+		
+		if (quantity < 1)
+			this.quantity = 0; // condition - if quantity is under 1 unit the quantity is staying at 0.
+		
+		else {
+			this.quantity = quantity; // for the other quantities the quantity indicated is true.
+		}
+		
 	}
-
+	
 	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
+	public void setPrice(double price) { 
+		
+		if (price < 0)
+			this.price = 0; //if price is under 0 price is staying at 0
+		
+		else if (price > 1000)
+			this.price = 1000; // if price is more than 1000 price is capped at 1000 max.
+		
+		else {
+			this.price = price; // other conditions the price is the price indicated.
+		}
+		
 	}
 
 	public double getInventoryPrice() {
 		// TODO Auto-generated method stub
-		totalInventoryPrice = price*quantity; //added fonction price*quantity
+		totalInventoryPrice = price*quantity; //added function price*quantity
 		return totalInventoryPrice;
 	}
 }

@@ -17,7 +17,7 @@ public class ProductRepository {
 	
 	private static void generateProductData() {
 		int id=0;
-		products.put(++id, new Product(id, 10, 90.50, "Echo Dot", "(2nd Generation) - Black")); //Quantity & price modification
+		products.put(++id, new Product(id, 10, 95.00, "Echo Dot", "(2nd Generation) - Black")); //Quantity & price modification
 		products.put(++id, new Product(id, 20, 9.99, "Anker 3ft / 0.9m Nylon Braided", "Tangle-Free Micro USB Cable"));
 		products.put(++id, new Product(id, 30, 69.99, "JVC HAFX8R Headphone", "Riptidz, In-Ear"));
 		products.put(++id, new Product(id, 40, 32.50, "VTech CS6114 DECT 6.0", "Cordless Phone"));
